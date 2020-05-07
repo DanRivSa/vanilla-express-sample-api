@@ -8,11 +8,11 @@ app.use(express.urlencoded({extended:true}));
 //routes
 app.use(require('./routes/index.routes'));
 
-
+//server configuration
 app.set('name','vanilla express api test');
 app.set('port',process.env.PORT || 3000);
 
-
+//server init
 app.listen(app.get('port'),(req,res)=>{
     console.log('app: ',app.get('name'));
     console.log('port: ',app.get('port')); 
